@@ -6,12 +6,6 @@ my_dict = {'Общее количество':0, 'Уникальные посещ
 
 my_dict['Общее количество'] = len(users)
 
-uniq_users = []
-
-for i in range(0, len(users)):
-    if users[i] not in uniq_users:
-        uniq_users.append(users[i])
-
-my_dict['Уникальные посещения'] = len(uniq_users)
+my_dict['Уникальные посещения'] = len(set(users))
 
 print(my_dict)
